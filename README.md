@@ -6,7 +6,7 @@ The provided Python code is a web application built using the Flask framework, d
 The code begins by importing necessary Python libraries. Flask is employed as the web framework for building the application, while other libraries like Pandas, BeautifulSoup, Selenium, and others are utilized for web scraping and data manipulation.
 
 **2. Flask App Setup:**
-The `app` object is created using Flask. Route decorators (`@app.route(...)`) are employed to define two routes: the root route ("/") for the main functionality and a "/download" route for accessing the generated CSV file. The main functionality is implemented in the `index` route, handling both GET and POST requests.
+The `app` object is created using Flask. Route decorators `@app.route(...)` are employed to define two routes: the root route ("/") for the main functionality and a "/download" route for accessing the generated CSV file. The main functionality is implemented in the `index` route, handling both GET and POST requests.
 
 **3. Web Scraping Function (`scrape_youtube_data`):**
 The core functionality of the application is encapsulated in the `scrape_youtube_data` function. This function utilizes Selenium, a web automation tool, to navigate through web pages. It initiates a Google search to find the YouTube page associated with the given company name. The code then extracts the link to this YouTube page and navigates to the videos section. Through automated scrolling, the script loads additional videos dynamically. The data (video link, title, views, and upload time) is then extracted from the HTML and organized into a Pandas DataFrame. Finally, this DataFrame is saved as a CSV file named "data.csv."
